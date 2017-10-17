@@ -97,4 +97,16 @@ class Exposer {
     void setSeckillId(long seckillId) {
         this.seckillId = seckillId;
     }
+
+    @Override
+    public String toString() {
+        return "Exposer{" +
+                "exposed=" + exposed +
+                ", md5='" + md5 + '\'' +
+                ", now=" + now +
+                ", start=" + start +
+                ", end=" + end +
+                ", seckillId=" + seckillId +
+                '}';
+    }
 }

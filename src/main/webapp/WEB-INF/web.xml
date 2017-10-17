@@ -5,5 +5,18 @@
          version="3.0"
          metadata-complete="true">
 
-
+    <servlet>
+        <servlet-name>seckill-dispathcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--整合其他框架 spring-dao.xml spring-service.xml -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-*.xml</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>seckill-dispathcherServlet</servlet-name>
+        <!-- 默认匹配所有的请求 -->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 </web-app>

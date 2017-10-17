@@ -72,7 +72,7 @@ class SeckillServiceImplement implements SeckillService {
     public
     SeckillExcution ExcuteSeckill(long seckillId, long userPhone, String md5)
             throws SeckillException, RepeatKillException, SeckillCloseException {
-        if (md5 == null || !md5.equals(getMD5(seckillId))) {
+        if (md5 == null || md5.equals(getMD5(seckillId))) {
             throw new SeckillException("data has been rewrite");
         }
         //执行秒杀逻辑 减库存 --- 记录购买记录
